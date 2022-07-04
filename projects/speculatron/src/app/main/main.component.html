@@ -1,0 +1,11 @@
+<app-timeline-map
+    *ngIf='title'
+    id='Speculatron'
+    [api]='timelineService'
+    [title]='title'
+    [subtitle]='subtitle'
+    [infobarTitle]='infobarTitle'
+    [infobarSubtitle]='infobarSubtitle'
+>
+</app-timeline-map>
+<app-map-selector *ngIf='mapSelector.showMapSelector'></app-map-selector>
