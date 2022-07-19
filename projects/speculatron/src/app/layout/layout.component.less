@@ -37,7 +37,7 @@
                 height: @header-size-mobile;
                 min-height: @header-size-mobile;
                 flex-flow: row;
-                padding: 12px;
+                padding: 8px 8px 8px 0;
                 margin-top: 0;
                 transition-property: margin-top;
                 transition-duration: 500ms;
@@ -50,14 +50,14 @@
             .logo {
                 margin: 0;
                 .desktop({
-                    width: 64px;
-                    height: 89px;
-                    margin-bottom: 20px;    
+                    width: 80px;
+                    height: 64px;
+                    margin-bottom: 0;    
                 });
                 .mobile({
-                    width: 58px;
-                    height: 40px;    
-                    margin-right: 20px;
+                    width: 60px;
+                    height: 48px;    
+                    margin-top: 12px;
                 });
 
                 cursor: pointer;
@@ -99,24 +99,51 @@
                     }
                     h2 {
                         font-weight: 500;
-                        font-size: 20px;
+                        font-size: 14px;
                     }
                 }
             }
-            .addNew {
+            .layers {
                 .desktop({
                     margin-top: auto;
                 });
                 .mobile({
-                    margin-left: auto;
+                  margin-left: auto;
+                });
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .contrib {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 8px;
+                    background-color: white;
+                    color: @bright-multiply;
+                    .font-manrope;
+                    font-weight: 700;
+                    font-size: 10px;
+                    line-height: 14px;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .addNew, .layers {
+                .desktop({
+                    width: 48px;
+                    height: 48px;
                 });
             }
-            .info, .addNew {
+            .info, .addNew, .layers {
                 cursor: pointer;
 
                 .desktop({
-                    width: 24px;
-                    height: 24px;
                     margin-bottom: 12px;
                 });
                 .mobile({
@@ -125,6 +152,17 @@
                     margin-right: 12px;
                 });
             }
+          .addNew {
+                .mobile({
+                    display: none;
+                });
+          }
+          .layers {
+            .mobile({
+              width: 40px;
+              height: 40px;
+            });
+          }
         }
     }
 }
