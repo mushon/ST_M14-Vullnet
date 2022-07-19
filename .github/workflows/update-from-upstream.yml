@@ -29,7 +29,7 @@ jobs:
           unzip -o main.zip
           rm main.zip speculatron-main
           git status
-          git checkout CONFIGURATION.ts package.json README.md
+          git checkout CONFIGURATION.ts package.json README.md .github
           git add .
           git commit -m "Update to latest version"
           git push
